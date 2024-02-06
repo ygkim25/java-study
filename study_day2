@@ -1,5 +1,5 @@
 ----------------------문제 1--------------------------
-package javaBase;
+// 덧셈 출력
 
 import java.util.Scanner;
 
@@ -16,6 +16,8 @@ public class VairableEx13 {
 }
 
 ----------------------문제 2--------------------------
+// 문자열 합치기
+
 import java.util.Scanner;
 
 public class Solution {
@@ -29,6 +31,7 @@ public class Solution {
 }
 
 ----------------------문제 3--------------------------
+//문자열 가로로 출력
 
 import java.util.Scanner;
 
@@ -46,6 +49,7 @@ public class VairableEx13 {
 }
 
 ----------------------문제 4--------------------------
+//홀수 짝수
 
 import java.util.Scanner;
 
@@ -63,6 +67,7 @@ public class Solution {
 }
 
 ----------------------문제 5--------------------------
+//문자열 바꾸기
   
 class Solution {
     public String solution(String my_string, String overwrite_string, int s) {
