@@ -1,0 +1,74 @@
+----------------------문제 1--------------------------
+package javaBase;
+
+import java.util.Scanner;
+
+public class VairableEx13 {
+
+	 public static void main(String[] args) {
+	        Scanner sc = new Scanner(System.in);
+	        int a = sc.nextInt();
+	        int b = sc.nextInt();
+	        
+	        
+	        System.out.println(a +" + "+ b +" = " +(a + b));
+	    }
+
+}
+
+----------------------문제 2--------------------------
+import java.util.Scanner;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String a = sc.next();
+        String b = sc.next();
+        
+        System.out.println(a+b);
+    }
+}
+
+----------------------문제 3--------------------------
+
+import java.util.Scanner;
+
+public class VairableEx13 {
+
+	 public static void main(String[] args) {
+	        Scanner sc = new Scanner(System.in);
+	        String a = sc.next();
+	        String[] list = a.split(""); 
+	        
+	        for(int i=0; i< a.length(); i++){
+	            System.out.println(list[i]);
+	        }
+	    }
+}
+
+----------------------문제 4--------------------------
+
+import java.util.Scanner;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        
+        if(n %2==0){
+            System.out.println(n + " is even");
+        }else{
+            System.out.println(n + " is odd");
+        }
+    }
+}
+
+----------------------문제 5--------------------------
+  
+class Solution {
+    public String solution(String my_string, String overwrite_string, int s) {
+        String first = my_string.substring(0, s);
+        String end = my_string.substring(s + overwrite_string.length());
+        return first + overwrite_string + end;
+    }
+}
