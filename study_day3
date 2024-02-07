@@ -1,2 +1,63 @@
 ----------------------문제 1--------------------------
-// 덧셈 출력
+class Solution {
+    public String solution(String str1, String str2) {
+        String answer = "";
+        
+        if(str1.length() == str2.length()){
+            for(int i = 0; i < str1.length(); i++){
+                answer += str1.charAt(i);
+                answer += str2.charAt(i);
+            }
+        }
+        return answer;
+    }
+}
+
+----------------------문제 2--------------------------
+class Solution {
+    public String solution(String[] arr) {
+        String answer = "";
+        
+        for(int i=0; i < arr.length; i++){
+            answer += arr[i];
+        }
+        return answer;
+    }
+}
+
+----------------------문제 3--------------------------
+class Solution {
+    public String solution(String my_string, int k) {
+        String answer = "";
+        
+        for(int i=1; i<=k; i++){
+            answer += my_string;
+        }
+        return answer;
+    }
+}
+
+----------------------문제 4--------------------------
+class Solution {
+    public int solution(int a, int b) {
+		String strA = String.valueOf(a) + String.valueOf(b);
+		String strB = String.valueOf(b) + String.valueOf(a);
+		
+		int valueAB = Integer.parseInt(strA);
+		int valueBA = Integer.parseInt(strB);
+		
+		return valueAB >= valueBA ? valueAB : valueBA;
+    }
+}
+
+----------------------문제 5--------------------------
+class Solution {
+    public int solution(int a, int b) {
+        String AB = String.valueOf(a) + String.valueOf(b);
+        int valueAB = Integer.parseInt(AB);
+        
+        int resultAB = 2*a*b;
+        
+        return valueAB >= resultAB ? valueAB : resultAB;
+    }
+}
