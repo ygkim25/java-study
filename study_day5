@@ -24,3 +24,17 @@ class Solution {
         return ret.length() == 0 ? "EMPTY" : ret;
     }
 }
+
+// 주사위
+class Solution {
+    public int solution(int a, int b, int c) {
+        int answer = a + b + c;
+
+        if(a == b && b == c){
+            answer = answer * ( a * a + b * b + c * c )*( a * a * a + b * b * b + c * c * c);
+        }else if(a == b || a == c || b == c){
+            answer = answer * (a * a + b * b + c * c);
+        }
+        return answer;
+    }
+}
