@@ -1,0 +1,85 @@
+
+두수의 차
+class Solution {
+    public int[] solution(int start_num, int end_num) {
+        
+        int length = end_num - start_num;
+        int[] answer = new int [length + 1];
+        
+        for(int i = 0; i <= length; i++) {
+                answer[i] = start_num++;
+        }
+        
+        return answer;
+    }
+}
+
+콜라츠 수열
+import java.util.*;
+
+class Solution {
+    public List<Integer> solution(int n) {
+        List<Integer> answer = new ArrayList<>();
+        while(n > 1) {
+            answer.add(n);
+            if(n % 2 == 0) {
+                n = n / 2;
+            } else {
+                n = 3 * n + 1;
+            }
+        }
+        answer.add(1);
+        return answer;
+    }
+}
+
+
+배열 만들기
+
+import java.util.*;
+
+class Solution {
+    public int[] solution(int[] arr) {
+        ArrayList<Integer> array = new ArrayList<>();
+        int i = 0;
+        while (i < arr.length) {
+            if (array.isEmpty()) {
+                array.add(arr[i]);
+                i += 1;
+            } else if (array.get(array.size() - 1) < arr[i]) {
+                array.add(arr[i]);
+                i += 1;
+            } else if (array.get(array.size() - 1) >= arr[i]) {
+                array.remove(array.size() - 1);
+            }
+        }
+        int idx = 0;
+        int[] stk = new int[array.size()];
+        for (int data : array)
+            stk[idx++] = data;
+        return stk;
+    }
+}
+
+간단한 논리연산
+
+class Solution {
+    public boolean solution(boolean x1, boolean x2, boolean x3, boolean x4) {
+        boolean answer = (x1 || x2) && (x3 || x4);
+        
+        return answer;
+    }
+}
+
+글자 이어 붙이기
+class Solution {
+    public String solution(String my_string, int[] index_list) {
+        String answer = "";
+        
+        for(int i = 0; i < index_list.length; i++){
+            answer += my_string.charAt(index_list[i]);
+        }
+        
+        return answer;
+    }
+}
