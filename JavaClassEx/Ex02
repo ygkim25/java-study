@@ -1,0 +1,120 @@
+//추상 부모 클래스
+public abstract class Employee {
+	
+	public String name;
+	public String job;
+	public int empNo;
+	public int pay;
+	
+	public Employee(String name,String job, int empNo, int pay) {
+		this.name = name;
+		this.job = job;
+		this.empNo = empNo;
+		this.pay = pay;
+	}
+	
+	//일반 메서드
+	public void employeeInfo(){
+		System.out.println(this.name + "의 직책은 " + this.job +" 사원번호는 "+this.empNo+ "입니다.");
+		}
+
+	public void doingNow() {
+			System.out.println("프로젝트를 진행 하고있습니다.");
+		}
+
+
+	//추상 메서드
+	public abstract void develop1();
+	public abstract void develop2();
+	public abstract void Promotion();
+}
+
+//James 클래스
+public class James extends Employee {
+
+	public James(String name, String job, int empNo,int pay) {
+		super(name,job, empNo,pay);
+
+	}
+
+	// 자식 클래스에서 오버라이드
+
+	@Override
+	public void develop1() {
+		System.out.println("Java 개발을 하고 있습니다.");
+
+	}
+
+	@Override
+	public void develop2() {
+		System.out.println("Python 개발을 하고 있습니다.");
+
+	}
+
+	@Override
+	public void Promotion() {
+		System.out.println("내년에 승진입니다.");
+
+	}
+
+}
+
+//Tomas 클래스
+public class Tomas extends Employee {
+
+	public Tomas(String name,String job, int empNo, int pay) {
+		super(name,job, empNo, pay);
+
+	}
+
+	@Override
+	public void develop1() {
+		System.out.println("React 개발을 하고 있습니다.");
+
+	}
+
+	@Override
+	public void develop2() {
+		System.out.println("Java script 개발을 하고 있습니다.");
+
+	}
+
+	@Override
+	public void Promotion() {
+		System.out.println("내년에 승진하지 못합니다.");
+
+	}
+
+}
+
+//Main 클래스
+public class Main {
+	public static void main(String[] args) {
+
+		System.out.println("----직원 정보 ---");
+		System.out.println();
+
+		James james = new James("손흥민","과장", 120, 3000000);
+
+		james.employeeInfo();
+		james.doingNow();
+		james.develop1();
+		james.develop2();
+		james.Promotion();
+
+		System.out.println(james.job + "님의 월급은 " + james.pay +"원 입니다.");
+		System.out.println();
+
+		Tomas tomas = new Tomas("김민재","대리", 127, 2000000);
+
+		tomas.employeeInfo();
+		tomas.doingNow();
+		tomas.develop1();
+		tomas.develop2();
+		tomas.Promotion();
+
+		System.out.println(tomas.job + "님의 월급은 " + tomas.pay +"원 입니다.");
+		System.out.println();
+
+	}
+}
