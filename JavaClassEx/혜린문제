@@ -1,0 +1,37 @@
+package ex02;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Main {
+	public static void main(String[] args) {
+		String[] words = { "leaf", "banana", "orange", "strawberry", "pear", "cat" };
+		List<String> wordsList = new ArrayList<>();
+
+		for (int i = 0; i < words.length; i++) {
+			wordsList.add(words[i]);
+		}
+		List<String> filter = Main.getFilteredWords(wordsList);
+
+		System.out.println("5글자 이상인 단어들의 리스트:");
+
+		for (String word : filter) {
+			System.out.println(word);
+		}
+	}
+
+	public static List<String> getFilteredWords(List<String> wordsList) {
+
+		List<String> filter = new ArrayList<String>();
+		
+		for(int i = 0; i<wordsList.size(); i++) {
+			if(wordsList.get(i).length()>=5) {
+				filter.add(wordsList.get(i));
+				
+			}
+		}
+		
+		return filter;
+		
+	}
+}
