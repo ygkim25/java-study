@@ -50,25 +50,25 @@ public class Product {
 		Product.count = count;
 	}
 
-//	public String getProduct() {
-//		return product;
-//	}
+	public String getProduct() {
+		return product;
+	}
 
 	public void setProduct(String product) {
 		this.product = product;
 	}
 
-//	public String getComm() {
-//		return comm;
-//	}
+	public String getComm() {
+		return comm;
+	}
 
 	public void setComm(String comm) {
 		this.comm = comm;
 	}
 
-//	public int getPrice() {
-//		return price;
-//	}
+	public int getPrice() {
+		return price;
+	}
 
 	public void setPrice(int price) {
 		this.price = price;
