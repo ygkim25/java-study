@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const students=[
+            {name : '홍길동', score : 74},
+            {name : '손흥민', score : 98},
+            {name : '황희찬', score : 81},
+            {name : '이강인', score : 65},
+        ]
+
+        function filterHighScores(students){
+            for(let i=0; i<students.length; i++){
+                if(students[i].score >=80){
+                    console.log(students[i])
+                }
+            }
+        }
+        filterHighScores(students);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
