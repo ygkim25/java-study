@@ -9,17 +9,28 @@
 
 
 
+package ex07;
+
 import java.util.Scanner;
 
-public class ex {
-	public static void main(String[] args) {
-      
 
-      Scanner sc = new Scanner(System.in);
-      sc.next();
-  
-  }
+
+public class ex {
+
+	public static void main(String[] args) {
+
+		System.out.println("가위 바위 보!");
+		System.out.print("나 -> ");
+		Scanner sc = new Scanner(System.in);
+		String a = sc.next();
+
+		int s = (int)(Math.random()*3);
+		String[] z = {"묵","찌","빠"};
+
+	}
+
 }
+
 
 -----------------출력문-------------------------------
 가위 바위 보!!
@@ -27,4 +38,3 @@ public class ex {
 상대 -> 빠
 졌습니다.
 
-다시 도전하시겠습니까? 1.예 2.아니오
