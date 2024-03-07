@@ -1,0 +1,30 @@
+컴퓨터를 이겨라 묵찌빠!
+
+코딩방법 자유
+
+방법 
+1. 이기고 지고 비긴 상태를 win, lose, draw 클래스를 만들어 승부 출력
+2. 묵,찌,빠 배열과 Math 함수를 매치해 값을 얻어 이기고 지고의 승부 출력
+3. 괜히 머리쓰기 귀찮으니 if문 or for문 노가다로 쉽게 풀기   <- 가장 쉬운듯
+
+
+
+import java.util.Scanner;
+
+public class ex {
+	public static void main(String[] args) {
+      
+
+      Scanner sc = new Scanner(System.in);
+      sc.next();
+  
+  }
+}
+
+-----------------출력문-------------------------------
+가위 바위 보!!
+나 -> 묵
+상대 -> 빠
+졌습니다.
+
+다시 도전하시겠습니까? 1.예 2.아니오
