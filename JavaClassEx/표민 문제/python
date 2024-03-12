@@ -17,7 +17,8 @@ print(set(list))
 
 #주어진 리스트를 역순으로 정렬한 결과를 출력하세요.(reverse)
 list = [3, 1, 4, 1, 5, 9, 2] 
-print(list[::-1])
+list.reverse()
+print(list)
 
 #주어진 리스트에 있는 모든 숫자의 합을 계산하여 출력하세요.(sum)
 list = [1, 2, 3, 4, 5]
