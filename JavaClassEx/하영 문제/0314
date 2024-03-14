@@ -12,23 +12,31 @@ Traceback (most recent call last):
     t[0] = 'a'
 TypeError: 'tuple' object does not support item assignment
 
-
+> 튜플은 한번 생성되면 값 변경 할 수 없음
 
 
 
 문제2) 다음 튜플을 리스트로 변환하시오
   
   interest = ('삼성전자', 'LG전자', 'SK Hynix')
-  
 
+tolist = list(interest)
+print(type(tolist))
 
+----출력값----
+<class 'list'>
   
 
 문제3) 1 부터 99까지의 정수 중 짝수만 저장된 튜플을 생성하시오
   
  예시: (2, 4, 6, 8 ... 98)
 
+a = tuple(range(2,99,2))
+print(a)
 
+----출려값----
+(2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44
+, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 80, 82, 84, 86, 88, 90, 92, 94, 96, 98)
 
 
 문제4) 다음 아이스크림 이름과 희망 가격을 딕셔너리로 구성하시오
@@ -39,14 +47,32 @@ TypeError: 'tuple' object does not support item assignment
 폴라포 	1200
 빵빠레 	1800
 
+dic = {'메로나' : 1000, '폴라포' : 1200, '빵빠레' : 1800}
+print(dic)
+print(type(dic))
 
+----출려값----
+{'메로나': 1000, '폴라포': 1200, '빵빠레': 1800}
+<class 'dict'>
 
 
 문제5) 다음의 딕셔너리에서 values 값으로만 구성된 리스트를 생성하시오
 
 icecream = {'탱크보이': 1200, '폴라포': 1200, '빵빠레': 1800, '월드콘': 1500, '메로나': 1000}
 
-정답)
+listval = list(icecream.values())
+
+print(listval)
+print(type(listval))
+
+[1200, 1200, 1800, 1500, 1000]
+<class 'list'>
+
+
+
+
+
+
 
 
   
