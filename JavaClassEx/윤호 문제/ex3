@@ -1,0 +1,59 @@
+추가한 데이터
+('1', '김영건', 25, '서울')
+('2', '손흥민', 25, '강릉')
+('3', '이강인', 30, '청주')
+('4', '김영권', 54, '판교')
+('5', '박지성', 21, '동탄')
+('6', '영화', 80, '부산')
+('7', '가나다', 25, '서울')
+('8', '다나카', 27, '부산')
+('9', '하이고', 20, '부산')
+('10', '귀찮다', 28, '서울')
+
+
+#1. 조건 : name에 '영' 이라는 글자 그리고 age는 25이상인 데이터를 모두 출력
+
+def selstudent():
+    conn = sqlite3.connect('./data/mystudy.db')
+    cursor = conn.cursor()
+
+    sql = 'select * from studentss where age >= 25 and name like "%영%" '
+    cursor.execute(sql)
+
+    students = cursor.fetchall()
+
+    for student in students:
+        print(type(student),student)
+    
+    cursor.close()
+    conn.close()
+selstudent()
+
+('1', '김영건', 25, '서울')
+('4', '김영권', 54, '판교')
+('6', '영화', 80, '부산')
+
+
+
+#2. 조건 :나이가 20세에서 30세 사이이고 주소가 '서울' 또는 '부산'인 사용자를 검색하며, 그 결과를 나이를 기준으로 내림차순으로 정렬하기
+
+def selstudent2():
+    conn = sqlite3.connect('./data/mystudy.db')
+    cursor = conn.cursor()
+
+    sql = 'select * from studentss where age between 20 and 30 and arre in ("서울","부산") order by age desc'
+    cursor.execute(sql)
+    students = cursor.fetchall()
+
+    for student in students:
+        print(type(student),student)
+    
+    cursor.close()
+    conn.close()
+selstudent2()
+
+('10', '귀찮다', 28, '서울')
+('8', '다나카', 27, '부산')
+('1', '김영건', 25, '서울')
+('7', '가나다', 25, '서울')
+('9', '하이고', 20, '부산')
